@@ -1,0 +1,17 @@
+CREATE DATABASE inventory
+CREATE TABLE barang (id_barang integer PRIMARY KEY,nama_barang varchar(20),id_jenis integer,harga integer,stok integer)
+
+CREATE TABLE jenis (id_jenis integer PRIMARY KEY,nama_jenis varchar(20))
+
+INSERT INTO jenis VALUES (11,'elektronik'),
+(12,'elektronik'),
+(13,'elektronik'),
+(14,'fashion'),
+(15,'fashion')
+
+INSERT INTO jenis VALUES 
+(1,'laptop',11,12000,12),
+(2,'hp',12,12000,14),
+(3,'baju',13,12000,16),
+(4,'celana',14,12000,18),
+(5,'sepatu',15,12000,19)
