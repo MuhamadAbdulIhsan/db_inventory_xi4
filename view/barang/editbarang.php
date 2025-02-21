@@ -26,17 +26,26 @@
 </nav>
   <body>
     <div class="container">
-    <h1>Tambah Jenis</h1>
-    <form action="simpen.php" method="POST">
+    <h1>Edit barang</h1>
+    <?php
+    $id_barang=$_GET['id_barang'];
+    include '../../config/koneksi.php';
+    $query=mysqli_query($conn, "SELECT * FROM barang WHERE id_barang='$id_barang'");
+    $result=mysqli_fetch_array($query);
+    ?>
+    <form action="prosesbarang.php?id_barang=<?php echo $result['id_barang']?>" method="POST">
   <div class="mb-3">
-    <label for="exampleInputEmail1" class="form-label">Id Jenis </label>
-    <input type="number" class="form-control" name="id_jenis" id="exampleInputEmail1" aria-describedby="emailHelp">
+    <label for="exampleInputEmail1" class="form-label">Nama Barang </label>
+    <input type="text" class="form-control" name="nama_barang" id="exampleInputEmail1" aria-describedby="emailHelp">
   </div>
   <div class="mb-3">
-    <label for="exampleInputEmail1" class="form-label">Nama Jenis </label>
-    <input type="text" class="form-control" name="nama_jenis" id="exampleInputEmail1" aria-describedby="emailHelp">
+    <label for="exampleInputEmail1" class="form-label">harga</label> </label>
+    <input type="text" class="form-control" name="harga" id="exampleInputEmail1" aria-describedby="emailHelp">
   </div>
-  
+  <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">Stok</label> </label>
+    <input type="text" class="form-control" name="stok" id="exampleInputEmail1" aria-describedby="emailHelp">
+  </div>
   <button type="submit" class="btn btn-primary">Submit</button>
   </div>
   
