@@ -36,15 +36,15 @@
     <form action="prosesbarang.php?id_barang=<?php echo $result['id_barang']?>" method="POST">
   <div class="mb-3">
     <label for="exampleInputEmail1" class="form-label">Nama Barang </label>
-    <input type="text" class="form-control" name="nama_barang" id="exampleInputEmail1" aria-describedby="emailHelp">
+    <input type="text" class="form-control" value="<?php echo $result['nama_barang']?>" name="nama_barang" id="exampleInputEmail1" aria-describedby="emailHelp">
   </div>
   <div class="mb-3">
     <label for="exampleInputEmail1" class="form-label">harga</label> </label>
-    <input type="text" class="form-control" name="harga" id="exampleInputEmail1" aria-describedby="emailHelp">
+    <input type="text" class="form-control" value="<?php echo $result['harga']?>" name="harga" id="exampleInputEmail1" aria-describedby="emailHelp">
   </div>
   <div class="mb-3">
     <label for="exampleInputEmail1" class="form-label">Stok</label> </label>
-    <input type="text" class="form-control" name="stok" id="exampleInputEmail1" aria-describedby="emailHelp">
+    <input type="text" class="form-control" value="<?php echo $result['stok']?>" name="stok" id="exampleInputEmail1" aria-describedby="emailHelp">
   </div>
   <button type="submit" class="btn btn-primary">Submit</button>
   </div>
